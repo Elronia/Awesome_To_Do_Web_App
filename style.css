@@ -34,14 +34,20 @@ body{
 .container-right{
     width: 70%;
     height: 100%;
-    background-color:#e9e8e6;
+    background-color:#E8E8E8;
     box-sizing: border-box;
     min-width: 200px;  
     flex-grow: 2;
+    /* THIS IS FOR THE DIV ON THE BOTTOM RIGHT OF THE 
+    TASK DISPLAY OCUPY THE REMINDER OF THE SPACE AFTER 
+    THE MENU */
+    display: flex;
+    flex-flow: column;
+    height: 100%;
 
 }
 
-/* MENU ICON  ------------------------------- */
+/* MENU LEFT & ICON  ------------------------------- */
 .menu-container{
     /* border: black 2px solid; */
     box-sizing: border-box;
@@ -85,15 +91,119 @@ width: 100%;
 height: 100%;
 }
 .add-category{
-    margin-top: -1%;
+    margin-top: 1%;
+    margin-left: 10px;
 }
 .add-category a{
-    margin-top: -1%;
+    /* margin-top: -0.1%; */
     text-decoration: none;
     color: black;
 }
 .add-category a:hover{
-    margin-top: -1%;
     text-decoration:underline;
     color: black;
+    text-decoration-color:cornflowerblue ;
+    text-decoration-thickness: 3px;
+}
+
+/* RIGHT NAVBAR AND LOGOUT BUTTON---------------------------------*/
+    /* contains both sides of the menu */
+.container-right-navBar{
+    border:royalblue solid 2px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 10%;
+    height: auto;
+    display: flex;
+
+}
+    /* there are two. 1. recent and completed tasks. 2. logout btn */
+.right-menu-container{
+    box-sizing: border-box;
+    /* border: red solid 2px; */
+    width: 50%;
+    min-height: 50px;
+    min-width: 100px;
+}
+
+    /* unordered list on the right menu */
+.right-menu{
+    list-style: none;
+    margin-left: -10px;
+}
+    /* list properties */
+.right-menu>li{
+    display: inline-block;
+    padding-right: 10px;
+}
+    /* anchor element on list of the right menu */
+.right-menu>li>a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.right-menu>li>a:hover{
+    text-decoration: underline;
+    text-decoration-color:cornflowerblue ;
+    text-decoration-thickness: 3px;
+}
+
+/* logout button container setup */
+.container-logout-btn{
+    display: flex;
+    align-items: center;
+    justify-content:flex-end;
+    box-sizing: border-box;
+}
+
+/* logout button properties */
+.logout-btn{
+    margin-right: 15px;
+    border: none;
+    border-radius: 25px;
+    background-color: white;
+    padding:7px 25px;
+}
+
+.logout-btn:hover{
+    background-color: cornflowerblue;
+    text-decoration: underline;
+
+}
+
+/* TASK DISPLAY ON THE RIGHT  */
+.right-display{
+    border:red solid 2px;
+    width: 100%;
+        box-sizing: border-box;
+    /* THIS IS FOR THE DIV ON THE BOTTOM RIGHT OF THE 
+    TASK DISPLAY OCUPY THE REMINDER OF THE SPACE AFTER 
+    THE MENU */
+    flex-grow: 1;
+    /*POSITION RELATIVE TO PLACE BUTTON */
+    position: relative;
+}
+
+/* add btn  */
+.addTask{
+    /* POSITION ABSOLUTE RELATIVE TO RIGHT-DISPLAY */
+    position: absolute;
+    bottom:0;
+    right: 0;
+    margin: 20PX;
+    text-decoration: none;
+}
+
+.addTask>button{
+    display:block;
+    padding-bottom: 4px; 
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    font-size: 1.3rem;
+    background-color: white;
+}
+.addTask>button:hover{
+    background-color:cornflowerblue ;
 }
