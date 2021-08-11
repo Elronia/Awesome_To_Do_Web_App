@@ -42,8 +42,12 @@
 
 .todo {
     text-align: center;
-    margin: 50% 35%;
+    margin: 50% 35% 0%;
     line-height: 1.6;
+}
+
+.img-todo-container {
+    margin: 0% 44% 200%;
 }
 
 .container-right {
